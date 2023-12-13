@@ -1,0 +1,60 @@
+.sec {
+    padding: 100px 0;
+}
+
+.sec .title {
+    max-width: 1200px;
+    margin: 0 auto 32px auto;
+    padding: 0 15px;
+
+    text-align: left;
+}
+
+.sec .title h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    line-height: 40px;
+}
+
+.sec .title p {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.more_btn {
+    padding: 16px 40px;
+
+    border: none;
+    background: transparent;
+
+    border: 1px solid #202124;
+
+    font-size: 16px;
+    color: #202124;
+
+    cursor: pointer;
+}
+
+/* .more_btn::after {
+    content: "\e941";
+    font-family: 'Material Symbols Outlined';
+
+    font-size: 22px;
+    font-weight: 300;
+
+    vertical-align: -6px;
+
+    margin: 0 0 0 8px;
+} */
+
+.more_btn:hover {
+    background: #202124;
+    color: #fff;
+}
