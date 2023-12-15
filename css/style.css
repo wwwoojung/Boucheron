@@ -391,7 +391,7 @@
     text-shadow: 1px 1px 2px #000;
     text-align: center;
 
-    margin: 0 auto 28px 0 auto;
+    margin: 0 auto 28px auto;
 }
 
 .main_history .history_wrap p {
