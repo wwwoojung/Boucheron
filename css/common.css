@@ -11,10 +11,10 @@
 }
 
 .sec .title h2 {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     margin: 0 0 8px 0;
-    line-height: 40px;
+    line-height: 32px;
 }
 
 .sec .title p {
@@ -41,18 +41,6 @@
 
     cursor: pointer;
 }
-
-/* .more_btn::after {
-    content: "\e941";
-    font-family: 'Material Symbols Outlined';
-
-    font-size: 22px;
-    font-weight: 300;
-
-    vertical-align: -6px;
-
-    margin: 0 0 0 8px;
-} */
 
 .more_btn:hover {
     background: #202124;
