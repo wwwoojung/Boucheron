@@ -1,20 +1,21 @@
 .sec {
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
 .sec .title {
     max-width: 1200px;
-    margin: 0 auto 32px auto;
+    margin: 0 auto 40px auto;
     padding: 0 15px;
 
     text-align: left;
 }
 
 .sec .title h2 {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 60px;
+    font-family: 'DM Serif Text', serif;
+    font-weight: 400;
     margin: 0 0 8px 0;
-    line-height: 32px;
+    line-height: 60px;
 }
 
 .sec .title p {

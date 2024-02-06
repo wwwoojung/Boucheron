@@ -15,7 +15,7 @@
 
     padding: 0 30px;
 
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .header_wrap.on {
@@ -31,12 +31,25 @@
     transform: translate(-50%, -50%);
 }
 
+.header_wrap h1 a img {
+    filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(70deg) brightness(108%) contrast(108%);
+}
+
+.header_wrap.on h1 a img {
+    filter: invert(0) sepia(0) saturate(0) hue-rotate(0) brightness(0) contrast(1);
+}
+
 .header_wrap .gnb {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     height: 80px;
+    color: #FFF;
+}
+
+.header_wrap.on .gnb {
+    color: #000000;
 }
 
 .header_wrap .gnb .menu {
@@ -79,27 +92,27 @@
 
 .main_visual .visual_text strong {
     display: inline-block;
-    font-size: 44px;
-    font-weight: 600;
-    text-indent: -0.15rem;
+    font-size: 64px;
+    font-family: 'DM Serif Text', serif;
+    font-weight: 400;
 
     color: #FFF;
-    text-shadow: 1px 1px 2px #000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 
-    margin: 0 0 20px 0;
+    margin: 0 0 8px 0;
 
     transform: translate(0, 100%);
     opacity: 0;
 }
 
 .main_visual .visual_text p {
-    font-size: 18px;
+    font-size: 16px;
 
     color: #FFF;
 
-    text-shadow: 1px 1px 2px #000;
+    /* text-shadow: 1px 1px 2px #000; */
 
-    line-height: 26px;
+    line-height: 24px;
 
     transform: translate(0, 100%);
     opacity: 0;
@@ -167,8 +180,17 @@
     }
 }
 
+
+
+
+
+
+
+
+
 .main_category {
     background: url(../images/main_category_bg.jpg) no-repeat top right;
+    /* background: #ffffff; */
 }
 
 .main_category .title h2 {
@@ -257,12 +279,14 @@
     opacity: 1;
 }
 
+
+
+
+
+
+
 .main_event {
     background-color: #fff;
-}
-
-.main_event .title {
-    text-align: center;
 }
 
 .main_event .event_con .top_con {
@@ -270,22 +294,31 @@
     justify-content: space-between;
     gap: 30px;
 
-    margin: 0 0 32px 0;
+    margin: 0 0 40px 0;
 }
 
 .main_event .event_con .top_con>* {
     flex: 1;
 }
 
+.main_event .title {
+    padding: 0 0;
+    margin: 0 auto 80px auto;
+}
+
+.main_event .title h2 {
+    text-indent: -0.15rem;
+}
+
 .main_event .event_con .event_text {
-    padding: 120px 0 0 0;
+    padding: 40px 0 0 0;
 }
 
 .main_event .event_con .event_text strong {
     display: inline-block;
 
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
 
     margin: 0 0 12px 0;
 }
@@ -294,11 +327,44 @@
     font-size: 16px;
     line-height: 24px;
 
-    margin: 0 0 52px 0;
+    margin: 0 0 60px 0;
+}
+
+.main_event .event_con .event_video {
+    position: relative;
+}
+
+.main_event .event_con .event_video .video_box {
+    position: relative;
+    z-index: 998;
+    border-radius: 250px;
+    overflow: hidden;
 }
 
 .main_event .event_con .event_video video {
     width: 100%;
+}
+
+.main_event .event_con .event_video #Layer_1 {
+    position: absolute;
+    top: 10px;
+    left: -55px;
+    overflow: visible;
+}
+
+.main_event .event_con .event_video #Layer_2 {
+    position: absolute;
+    top: -30px;
+    left: -50px;
+    overflow: visible;
+}
+
+.main_event .event_con .event_video #Layer_1 path {
+    animation: circle_moving01 7s infinite;
+}
+
+.main_event .event_con .event_video #Layer_2 path {
+    animation: circle_moving02 7s infinite;
 }
 
 .main_event .event_con .bottom_con {
@@ -361,6 +427,33 @@
     display: inline-block;
     margin: 0 0 8px 0;
 }
+
+@keyframes circle_moving01 {
+    50% {
+        d: path("M558.51,507.19C549.33,671.74,342.8,710.1,141.84,616.71,6.92,554-26.41,372.27,22,169.89,60.34,9.6,220.18-45.49,429.38,42,528.35,83.38,570.41,293.7,558.51,507.19Z");
+    }
+
+    100% {
+        d: path("M565.49,396.87c-9.17,164.56-222.86,309.6-442.7,281.75-93-11.79-144.44-192.86-96-395.24C65.1,123.09,194-27.66,411.68,35.76,512.48,65.13,577.4,183.38,565.49,396.87Z");
+    }
+}
+
+@keyframes circle_moving02 {
+    50% {
+        d: path("M565.49,396.87c-9.17,164.56-222.86,309.6-442.7,281.75-93-11.79-144.44-192.86-96-395.24C65.1,123.09,194-27.66,411.68,35.76,512.48,65.13,577.4,183.38,565.49,396.87Z");
+    }
+
+    100% {
+        d: path("M558.51,507.19C549.33,671.74,342.8,710.1,141.84,616.71,6.92,554-26.41,372.27,22,169.89,60.34,9.6,220.18-45.49,429.38,42,528.35,83.38,570.41,293.7,558.51,507.19Z");
+    }
+}
+
+
+
+
+
+
+
 
 .main_history {
     position: relative;
