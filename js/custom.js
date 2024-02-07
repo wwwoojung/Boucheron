@@ -15,9 +15,16 @@ $(function () {
     $('.main_category .category_itm').slick({
         slidesToShow: 4,
         arrows: false,
-        autoplay: true,
+        // autoplay: true,
         pauseOnHover: false,
+        centerMode: true,
+        centerPadding: '0'
     })
+
+    $('.main_category .category_itm').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        $('.main_category .category_name li').removeClass('on');
+        $('.main_category .category_name li').eq(nextSlide).addClass('on');
+    });
 
     $('.main_category .category_name a').on('click', function (e) {
         e.preventDefault();

@@ -148,7 +148,7 @@
     transform: translate(-50%, 0);
 
     width: 1px;
-    height: 60px;
+    height: 64px;
 
     background: #fff;
 }
@@ -206,7 +206,7 @@
     bottom: 0;
     right: 0;
     width: calc((100% - 1200px)/2 + 1185px);
-    height: 220px;
+    height: 280px;
 
     background: #014841;
 }
@@ -221,43 +221,6 @@
 
     justify-content: space-between;
 }
-
-.main_category .category_con .category_itm {
-    min-width: 0;
-    width: 970px;
-
-    margin: 0 -20px 0 0;
-}
-
-.main_category .category_con .category_itm .slick-list {
-    height: 310px;
-}
-
-
-.main_category .category_con .category_itm .itm figure {
-    width: 220px;
-    padding: 0 0 20px 0;
-
-    background: #fff;
-    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-
-    text-align: center;
-    overflow: hidden;
-}
-
-.main_category .category_con .category_itm .img_box {
-    width: 220px;
-    height: 250px;
-
-    margin: 0 0 16px 0;
-}
-
-.main_category .category_itm .itm img {
-    width: 100%;
-    height: 100%;
-}
-
 
 .main_category .category_name {
     display: flex;
@@ -276,12 +239,13 @@
     content: "";
     position: absolute;
     top: 0;
-    right: -10px;
+    right: -15px;
 
     width: 6px;
     height: 6px;
     background: #014841;
     border-radius: 50%;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 1);
 
     opacity: 0;
 }
@@ -289,8 +253,8 @@
 .main_category .category_name li::after {
     content: "";
     position: absolute;
-    top: -1px;
-    right: -12px;
+    top: -2px;
+    right: -17px;
 
     width: 10px;
     height: 10px;
@@ -329,6 +293,63 @@
         transform: scale(1);
     }
 }
+
+.main_category .category_con .category_itm {
+    min-width: 0;
+    width: 970px;
+
+    margin: 0 -20px 0 0;
+}
+
+.main_category .category_con .category_itm .slick-list {
+    height: 380px;
+}
+
+.main_category .category_con .category_itm .itm {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 380px;
+}
+
+.main_category .category_con .category_itm .itm figure {
+    width: 220px;
+    padding: 24px 16px;
+
+    background: #fff;
+    box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+    overflow: hidden;
+}
+
+.main_category .category_con .category_itm .itm.slick-center figure {
+    border-radius: 100px 100px 0 0;
+}
+
+.main_category .category_con .category_itm .img_box {
+    height: 213.66px;
+    margin: 0 0 16px 0;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main_category .category_con .category_itm .itm.slick-center .img_box {
+    height: 280px;
+    transition: height 1s;
+}
+
+.main_category .category_itm .itm img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
 
 
 
@@ -538,16 +559,21 @@
     position: relative;
     z-index: 1;
 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
     text-align: center;
 }
 
 .main_history .history_wrap strong {
     position: relative;
     display: inline-block;
+
     font-size: 40px;
-    font-family: 'DM Serif Text', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 1px;
+
     color: #fff;
-    /* text-shadow: 1px 1px 2px #000; */
     text-align: center;
 
     margin: 0 auto 28px auto;
@@ -566,8 +592,8 @@
 
 .main_history .history_wrap p {
     color: #fff;
-    /* text-shadow: 1px 1px 2px #000; */
 
+    font-weight: 300;
     line-height: 24px;
     margin: 0 0 44px 0;
 }
@@ -581,6 +607,18 @@
     color: #202124;
     background: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .main_store {
     background: #fff;
@@ -605,23 +643,25 @@
 
 .main_store .store_con .right_con .title {
     text-align: center;
-    border: 2px solid #014841;
+    border: 1px solid #014841;
     padding: 120px 0;
     margin: 0 auto;
 
     flex: 2;
     width: 100%;
+
 }
 
 .main_store .store_con .right_con figure {
     flex: 1;
+    border-radius: 60px 0 0 0;
+    overflow: hidden;
 }
 
-/* .main_store .store_con .right_con img {
-    height: 251px;
-} */
-
 .main_store .store_con .title h2 {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Nanum Myeongjo', serif;
     margin: 0 0 16px 0;
 }
 
@@ -629,9 +669,25 @@
     margin: 0 0 62px 0;
 }
 
+.main_store .store_con>figure {
+    border-radius: 0 0 130px 0;
+    overflow: hidden;
+}
+
 .main_store .store_con img {
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 #footer {
     background-color: #014841;
