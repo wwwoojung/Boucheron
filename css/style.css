@@ -198,6 +198,7 @@
 .main_category {
     background: #ffffff;
     position: relative;
+    z-index: 2;
 }
 
 .main_category::before {
@@ -205,9 +206,36 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
     width: calc((100% - 1200px)/2 + 1185px);
     height: 280px;
 
+    background: #014841;
+}
+
+.main_category::after {
+    /* content: "Categories";
+    position: absolute;
+    top: 100px;
+    left: calc((100% - 1200px)/2);
+    z-index: 0;
+
+    font-size: 300px;
+    font-weight: 900;
+    font-family: 'Noto Serif', serif;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+
+    transform: rotate(90deg);
+    transform-origin: left; */
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 1px;
+    height: 60px;
     background: #014841;
 }
 
@@ -216,6 +244,8 @@
 }
 
 .main_category .category_con {
+    position: relative;
+    z-index: 2;
     display: flex;
     gap: 30px;
 
@@ -375,7 +405,7 @@
 
 .main_event .title {
     padding: 0 0;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 60px auto;
 }
 
 .main_event .title h2 {
@@ -402,15 +432,15 @@
     margin: 0 0 60px 0;
 }
 
-.main_event .event_con .event_text::after {
+.main_event .event_con .event_text .title::after {
     content: "";
     display: block;
 
     width: 1px;
-    height: 80px;
+    height: 60px;
 
-    background: rgba(0, 0, 0, 0.25);
-    margin: 80px 0 0 0;
+    background: #014841;
+    margin: 60px 0 0 0;
 }
 
 .main_event .event_con .event_video {
@@ -541,7 +571,7 @@
 .main_history {
     position: relative;
 
-    background: url(../images/main_history_bg.png) no-repeat center center/cover;
+    background: url(../images/main_history_bg.png) no-repeat fixed center center/cover;
 }
 
 .main_history::after {
@@ -633,6 +663,11 @@
     flex: 1;
 }
 
+.main_store .store_con>figure {
+    position: relative;
+    z-index: 1;
+}
+
 .main_store .store_con .right_con {
     order: 2;
 
@@ -642,14 +677,32 @@
 }
 
 .main_store .store_con .right_con .title {
+    position: relative;
+    z-index: 1;
+
     text-align: center;
-    border: 1px solid #014841;
+    /* border: 1px solid #014841; */
     padding: 120px 0;
     margin: 0 auto;
 
-    flex: 2;
+    flex: 1;
     width: 100%;
 
+    color: #FFF;
+}
+
+.main_store .store_con .right_con .title::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 64px;
+    bottom: 0;
+    right: 0;
+
+    width: 660px;
+
+    background: #014841;
+    border-radius: 0 130px 0 0;
 }
 
 .main_store .store_con .right_con figure {
