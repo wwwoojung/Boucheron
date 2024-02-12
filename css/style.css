@@ -213,32 +213,6 @@
     background: #014841;
 }
 
-.main_category::after {
-    /* content: "Categories";
-    position: absolute;
-    top: 100px;
-    left: calc((100% - 1200px)/2);
-    z-index: 0;
-
-    font-size: 300px;
-    font-weight: 900;
-    font-family: 'Noto Serif', serif;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
-
-    transform: rotate(90deg);
-    transform-origin: left; */
-
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    width: 1px;
-    height: 60px;
-    background: #014841;
-}
-
 .main_category .title h2 {
     text-indent: -0.15rem;
 }
@@ -664,7 +638,6 @@
 }
 
 .main_store .store_con>figure {
-    position: relative;
     z-index: 1;
 }
 
@@ -673,52 +646,70 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 30px;
 }
 
 .main_store .store_con .right_con .title {
     position: relative;
     z-index: 1;
+    flex: 1;
 
     text-align: center;
+    background: #014841;
     /* border: 1px solid #014841; */
-    padding: 120px 0;
     margin: 0 auto;
 
-    flex: 1;
     width: 100%;
 
     color: #FFF;
 }
 
-.main_store .store_con .right_con .title::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 64px;
-    bottom: 0;
-    right: 0;
-
-    width: 660px;
-
-    background: #014841;
-    border-radius: 0 130px 0 0;
-}
-
 .main_store .store_con .right_con figure {
-    flex: 1;
     border-radius: 60px 0 0 0;
     overflow: hidden;
 }
 
+.main_store .store_con .title {
+    position: relative;
+}
+
+.main_store .store_con .title::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+
+    background: #ffffff;
+    clip-path: polygon(30% 0, 70% 0, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0 80%, 0 20%);
+}
+
+.main_store .store_con .title .text_box {
+    position: absolute;
+    top: 31px;
+    bottom: 31px;
+    left: 31px;
+    right: 31px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #014841;
+    clip-path: polygon(30% 0, 70% 0, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0 80%, 0 20%);
+}
+
 .main_store .store_con .title h2 {
     font-size: 40px;
-    font-weight: 800;
     font-family: 'Nanum Myeongjo', serif;
     margin: 0 0 16px 0;
 }
 
 .main_store .store_con .title p {
+    font-weight: 300;
     margin: 0 0 62px 0;
 }
 
@@ -731,6 +722,15 @@
     width: 100%;
 }
 
+.main_store .title .more_btn {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.main_store .title .more_btn:hover {
+    color: #202124;
+    background: #fff;
+}
 
 
 
