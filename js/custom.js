@@ -15,7 +15,7 @@ $(function () {
     $('.main_category .category_itm').slick({
         slidesToShow: 4,
         arrows: false,
-        // autoplay: true,
+        autoplay: true,
         pauseOnHover: false,
         centerMode: true,
         centerPadding: '0'

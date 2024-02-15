@@ -379,7 +379,7 @@
 
 .main_event .title {
     padding: 0 0;
-    margin: 0 auto 60px auto;
+    margin: 0 auto 80px auto;
 }
 
 .main_event .title h2 {
@@ -396,25 +396,18 @@
     font-size: 18px;
     font-weight: 600;
 
-    margin: 0 0 12px 0;
+    margin: 0 0 28px 0;
 }
 
 .main_event .event_con .event_text p {
     font-size: 16px;
-    line-height: 32px;
+    line-height: 24px;
 
-    margin: 0 0 60px 0;
+    margin: 0 0 28px 0;
 }
 
-.main_event .event_con .event_text .title::after {
-    content: "";
-    display: block;
-
-    width: 1px;
-    height: 60px;
-
-    background: #014841;
-    margin: 60px 0 0 0;
+.main_event .event_con .event_text p:nth-of-type(2) {
+    margin: 0 0 76px 0;
 }
 
 .main_event .event_con .event_video {
@@ -434,15 +427,15 @@
 
 .main_event .event_con .event_video #Layer_1 {
     position: absolute;
-    top: 10px;
-    left: -55px;
+    top: -10px;
+    left: -110px;
     overflow: visible;
 }
 
 .main_event .event_con .event_video #Layer_2 {
     position: absolute;
     top: -30px;
-    left: -50px;
+    left: -110px;
     overflow: visible;
 }
 
@@ -540,15 +533,18 @@
 
 
 
-
-
 .main_history {
-    position: relative;
+    padding: 0 0 100px 0;
+    background: #ffffff;
+}
 
+.main_history .history_wrap {
+    position: relative;
+    min-height: 550px;
     background: url(../images/main_history_bg.png) no-repeat fixed center center/cover;
 }
 
-.main_history::after {
+.main_history .history_wrap::after {
     content: "";
     position: absolute;
     top: 0;
@@ -556,17 +552,19 @@
     left: 0;
     right: 0;
 
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.main_history .history_wrap {
-    position: relative;
+.main_history .history_wrap .text_box {
+    position: absolute;
     z-index: 1;
+    bottom: -100px;
+    right: 100px;
 
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    padding: 80px 80px;
     text-align: center;
+
+    background: #014841;
 }
 
 .main_history .history_wrap strong {

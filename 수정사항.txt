@@ -1,0 +1,5 @@
+category 메뉴 구분되게
+
+마지막 섹션 2개 수정
+
+footer 카피라이트 dt = font-weight 500
