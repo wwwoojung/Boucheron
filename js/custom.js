@@ -18,7 +18,31 @@ $(function () {
         autoplay: true,
         pauseOnHover: false,
         centerMode: true,
-        centerPadding: '0'
+        centerPadding: '0',
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 3,
+                    centerMode: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: false,
+                }
+            },
+            {
+                breakpoint: 625,
+                settings: {
+                    slidesToShow: 1,
+                    autoplaySpeed: 3000,
+                    speed: 900,
+                }
+            }
+        ]
     })
 
     $('.main_category .category_itm').on('beforeChange', function (event, slick, currentSlide, nextSlide) {

@@ -41,9 +41,22 @@
     color: #202124;
 
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .more_btn:hover {
     background: #202124;
     color: #fff;
+}
+
+@media(max-width:768px) {
+    .sec .title h2 {
+        font-size: 8vw;
+    }
+}
+
+@media(max-width:500px) {
+    .sec .title h2 {
+        font-size: 9vw;
+    }
 }
