@@ -89,6 +89,10 @@
     color: #ffffff;
 }
 
+.header_wrap.on .m_open .material-symbols-outlined {
+    color: #202124;
+}
+
 @media (max-width:768px) {
     .header_wrap .gnb {
         display: none;
