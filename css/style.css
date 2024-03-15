@@ -2,6 +2,10 @@
     outline: 1px solid tomato;
 } */
 
+.wrap {
+    overflow-x: hidden;
+}
+
 #header {}
 
 .header_wrap {
